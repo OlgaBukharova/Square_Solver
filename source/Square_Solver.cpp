@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
+#include <ctype.h>
 
 #define EPS 0.000000001
 
@@ -17,7 +18,7 @@ struct equation
 /**
  * @brief Comparation of floating point numbers to 0
  * 
- * @param a Floationg point number
+ * @param a Floating point number
  * @return true if a is 0
  * @return false if a is not 0
  */
@@ -114,6 +115,33 @@ void solve_quadratic(struct equation *ex)
 }
 
 /**
+ * @brief Cleaning buffer stdin
+ * 
+ */
+void clean_buffer()
+{
+    char c = 0;
+
+    while (((c = getchar()) != EOF) && (c != '\n'));
+}
+
+/**
+ * @brief Checking if the buffer stdin is clean
+ * 
+ * @return int 0 if clean, 1 otherwise
+ */
+int check_buffer()
+{
+    char c = 0;
+    while (((c = getchar()) != EOF) && (c != '\n'))
+    {
+        if (!isspace(c))
+            return 1; //incorrect
+    }
+    return 0; //correct
+}
+
+/**
  * @brief Scaning user coefficients 
  * 
  * @param ex Structure of coefficient, number of solutions and solutions
@@ -123,8 +151,23 @@ void input_coef(struct equation * ex)
     assert(ex);
 
     int s = 0;
-    s = scanf("%lf%lf%lf", &(ex->a), &(ex->b), &(ex->c));
 
+    while (s != 3)
+    {
+        s = scanf("%lf%lf%lf", &(ex->a), &(ex->b), &(ex->c));
+
+        char c = 0;
+
+        if ((s != 3) || (check_buffer()))
+        {
+            clean_buffer();
+            
+            printf("Input error. Try again...\n");
+
+            s = 0;
+        }
+    }
+   
 }
 
 /**

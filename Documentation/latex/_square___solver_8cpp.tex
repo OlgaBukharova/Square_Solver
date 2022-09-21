@@ -1,6 +1,258 @@
-\hypertarget{_square___solver_8cpp}{}\doxysection{source/\+Square\+\_\+\+Solver.cpp File Reference}
-\label{_square___solver_8cpp}\index{source/Square\_Solver.cpp@{source/Square\_Solver.cpp}}
+\hypertarget{_square___solver_8cpp}{}\doxysection{Square\+\_\+\+Solver.\+cpp File Reference}
+\label{_square___solver_8cpp}\index{Square\_Solver.cpp@{Square\_Solver.cpp}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$assert.\+h$>$}\newline
-Include dependency graph for Square\+\_\+\+Solver.\+cpp\+:
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structequation}{equation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}{EPS}}~0.\+000000001
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\+\_\+zero}} (double a)
+\begin{DoxyCompactList}\small\item\em Comparation of floating point numbers to 0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}{if\+\_\+minus\+\_\+o}} (double a)
+\begin{DoxyCompactList}\small\item\em Change of -\/0 to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}{solve\+\_\+zero\+\_\+deg}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Solvation of zero degree equations (coefficients at x$^\wedge$2 and x are 0) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}{solve\+\_\+linear}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Solvation of linear equations (coefficient at x$^\wedge$2 is 0, coefficient at x is not 0) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}{solve\+\_\+quadratic}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Solvation of quadratic equation (coefficient at x$^\wedge$2 is not 0) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}{clean\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Cleaning buffer stdin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}{check\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Checking if the buffer stdin is clean. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}{input\+\_\+coef}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Scaning user coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}{solve\+\_\+equation}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Solvation of any equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}{output\+\_\+solution}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+\begin{DoxyCompactList}\small\item\em Printing solutions depending on the number of colutions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_square___solver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}\label{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!EPS@{EPS}}
+\index{EPS@{EPS}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
+{\footnotesize\ttfamily \#define EPS~0.\+000000001}
+
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}\label{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!check\_buffer@{check\_buffer}}
+\index{check\_buffer@{check\_buffer}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_buffer()}{check\_buffer()}}
+{\footnotesize\ttfamily int check\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checking if the buffer stdin is clean. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if clean, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}\label{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!clean\_buffer@{clean\_buffer}}
+\index{clean\_buffer@{clean\_buffer}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{clean\_buffer()}{clean\_buffer()}}
+{\footnotesize\ttfamily void clean\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleaning buffer stdin. 
+
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}\label{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!if\_minus\_o@{if\_minus\_o}}
+\index{if\_minus\_o@{if\_minus\_o}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{if\_minus\_o()}{if\_minus\_o()}}
+{\footnotesize\ttfamily double if\+\_\+minus\+\_\+o (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+Change of -\/0 to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Floating point number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 0 if a is -\/0, a if not -\/0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}\label{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!input\_coef@{input\_coef}}
+\index{input\_coef@{input\_coef}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_coef()}{input\_coef()}}
+{\footnotesize\ttfamily void input\+\_\+coef (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Scaning user coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}\label{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+Comparation of floating point numbers to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Floating point number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a is 0 
+
+false if a is not 0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_square___solver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!main@{main}}
+\index{main@{main}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00228}{228}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}\label{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!output\_solution@{output\_solution}}
+\index{output\_solution@{output\_solution}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{output\_solution()}{output\_solution()}}
+{\footnotesize\ttfamily void output\+\_\+solution (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Printing solutions depending on the number of colutions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00207}{207}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}\label{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily void solve\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Solvation of any equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}\label{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_linear@{solve\_linear}}
+\index{solve\_linear@{solve\_linear}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_linear()}{solve\_linear()}}
+{\footnotesize\ttfamily void solve\+\_\+linear (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Solvation of linear equations (coefficient at x$^\wedge$2 is 0, coefficient at x is not 0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}\label{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_quadratic@{solve\_quadratic}}
+\index{solve\_quadratic@{solve\_quadratic}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_quadratic()}{solve\_quadratic()}}
+{\footnotesize\ttfamily void solve\+\_\+quadratic (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Solvation of quadratic equation (coefficient at x$^\wedge$2 is not 0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
+\mbox{\Hypertarget{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}\label{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}} 
+\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_zero\_deg@{solve\_zero\_deg}}
+\index{solve\_zero\_deg@{solve\_zero\_deg}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_zero\_deg()}{solve\_zero\_deg()}}
+{\footnotesize\ttfamily void solve\+\_\+zero\+\_\+deg (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
+
+
+
+Solvation of zero degree equations (coefficients at x$^\wedge$2 and x are 0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficient, number of solutions and solutions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
+
