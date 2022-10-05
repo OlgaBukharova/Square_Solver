@@ -29,6 +29,16 @@ bool is_zero(double a);
 double if_minus_o(double a);  
 
 /**
+ * @brief Comparation of two floating point numbers
+ * 
+ * @param a Floating point number
+ * @param b Floating piont number
+ * @return true if equal
+ * @return false if not equal
+ */
+bool is_equal(double a, double b)
+
+/**
  * @brief Solvation of zero degree equations (coefficients at x^2 and x are 0)
  * 
  * @param ex Structure of coefficient, number of solutions and solutions

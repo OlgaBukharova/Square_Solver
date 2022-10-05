@@ -35,6 +35,14 @@ void solve_zero_deg(struct equation *ex)
     } 
 }
 
+bool is_equal(double a, double b)
+{
+    assert(isfinite(a));
+    assert(isfinite(b));
+
+    return is_zero(a - b) ;
+}
+
 void solve_linear(struct equation *ex)
 {
     assert(ex);
