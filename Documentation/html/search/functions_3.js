@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['output_5fsolution_0',['output_solution',['../_square___solver_8cpp.html#aba6d49304f3123d6f2f53e9833c4c781',1,'Square_Solver.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../main__tester_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main_tester.cpp']]]
 ];

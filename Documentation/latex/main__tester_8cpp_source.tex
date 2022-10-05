@@ -1,0 +1,112 @@
+\hypertarget{main__tester_8cpp_source}{}\doxysection{main\+\_\+tester.\+cpp}
+\label{main__tester_8cpp_source}\index{test/main\_tester.cpp@{test/main\_tester.cpp}}
+\mbox{\hyperlink{main__tester_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}../headers/solver.h"{}}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <assert.h>}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00013}\mbox{\hyperlink{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}{00013}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}{print\_error}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structequation}{equation}} * ex, \textcolor{keywordtype}{int} n\_exp, \textcolor{keywordtype}{double} x1\_exp, \textcolor{keywordtype}{double} x2\_exp)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00015}00015     printf(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00016}00016     printf(\textcolor{stringliteral}{"{}Test failed.\(\backslash\)nCoef: \%lf, \%lf, \%lf.\(\backslash\)n"{}}, ex-\/>\mbox{\hyperlink{structequation_a3870341de55233a3ba0948bf9e5ebf02}{a}}, ex-\/>\mbox{\hyperlink{structequation_ade0c0fb19865318fcc60941aedbaed9a}{b}}, ex-\/>\mbox{\hyperlink{structequation_aa4a1fdb530b9f3026f3aa849f552e114}{c}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00017}00017     printf(\textcolor{stringliteral}{"{}Expected number of solutions: \%d.\(\backslash\)nExpected solutions x1, x2: \%lf, \%lf.\(\backslash\)n"{}}, n\_exp, x1\_exp, x2\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00018}00018     printf(\textcolor{stringliteral}{"{}Recieved number of solutions: \%d.\(\backslash\)nRecieved solutions x1, x2: \%lf, \%lf.\(\backslash\)n"{}}, ex-\/>\mbox{\hyperlink{structequation_ab8cd616bee37bcc86a0dbb1759985759}{number}}, ex-\/>\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}}, ex-\/>\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00019}00019     printf(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00020}00020 \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00031}\mbox{\hyperlink{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}{00031}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}{equal\_solutions}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structequation}{equation}} * ex, \textcolor{keywordtype}{double} x1\_exp, \textcolor{keywordtype}{double} x2\_exp)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00032}00032 \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00033}00033     \textcolor{keywordflow}{if} (ex-\/>\mbox{\hyperlink{structequation_ab8cd616bee37bcc86a0dbb1759985759}{number}} == 2)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00034}00034         \textcolor{keywordflow}{return} ((\mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\_equal}}(x1\_exp, ex-\/>\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}}) \&\& \mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\_equal}}(x2\_exp, ex-\/>\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}})) || (\mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\_equal}}(x1\_exp, ex-\/>\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}}) \&\& \mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\_equal}}(x2\_exp, ex-\/>\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}})));}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00035}00035     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ex-\/>\mbox{\hyperlink{structequation_ab8cd616bee37bcc86a0dbb1759985759}{number}} == 1)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00036}00036         \textcolor{keywordflow}{return} (\mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\_equal}}(x1\_exp, ex-\/>\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}}) \&\& isnan(ex-\/>\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}}));}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00037}00037     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00038}00038         \textcolor{keywordflow}{return} (isnan(ex-\/>\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}}) \&\& isnan(ex-\/>\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}}));}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00039}00039     }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00051}\mbox{\hyperlink{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}{00051}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}{test\_input\_coef}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structequation}{equation}}* ex, \textcolor{keywordtype}{int}* n\_exp, \textcolor{keywordtype}{double}* x1\_exp, \textcolor{keywordtype}{double}* x2\_exp)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00053}00053     assert(ex);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00055}00055     \textcolor{keywordtype}{int} s = 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00057}00057     s = scanf(\textcolor{stringliteral}{"{}\%lf\%lf\%lf"{}}, \&(ex-\/>\mbox{\hyperlink{structequation_a3870341de55233a3ba0948bf9e5ebf02}{a}}), \&(ex-\/>\mbox{\hyperlink{structequation_ade0c0fb19865318fcc60941aedbaed9a}{b}}), \&(ex-\/>\mbox{\hyperlink{structequation_aa4a1fdb530b9f3026f3aa849f552e114}{c}}));}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00059}00059     \textcolor{keywordflow}{if} (s != 3) }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00060}00060     \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00061}00061         printf(\textcolor{stringliteral}{"{}Incorrect test. Lack of coef.\(\backslash\)n"{}});    }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00062}00062         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00065}00065     scanf(\textcolor{stringliteral}{"{}\%d"{}}, n\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00067}00067     \textcolor{keywordflow}{if} (*n\_exp == 2)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00068}00068         scanf(\textcolor{stringliteral}{"{}\%lf\%lf"{}}, x1\_exp, x2\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00069}00069     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*n\_exp == 1)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00070}00070         scanf(\textcolor{stringliteral}{"{}\%lf"{}}, x1\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00071}00071     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!((*n\_exp == 0) || (*n\_exp == -\/1)))}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00072}00072     \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00073}00073         printf(\textcolor{stringliteral}{"{}Incorrect test. Invalid expected number of solutions.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00074}00074         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00076}00076     }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00077}00077    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00089}\mbox{\hyperlink{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}{00089}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}{test\_output}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structequation}{equation}} * ex, \textcolor{keywordtype}{int} n\_exp, \textcolor{keywordtype}{double} x1\_exp, \textcolor{keywordtype}{double} x2\_exp)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00090}00090 \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00091}00091     assert(ex);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00093}00093     \textcolor{keywordflow}{if} ((ex-\/>\mbox{\hyperlink{structequation_ab8cd616bee37bcc86a0dbb1759985759}{number}} != n\_exp))}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00094}00094     \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00095}00095         \mbox{\hyperlink{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}{print\_error}}(ex, n\_exp, x1\_exp, x2\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00096}00096         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00097}00097     \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00098}00098     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}{equal\_solutions}}(ex, x1\_exp, x2\_exp))}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00099}00099     \{    }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00100}00100         \mbox{\hyperlink{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}{print\_error}}(ex, n\_exp, x1\_exp, x2\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00101}00101         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00103}00103     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00104}00104         printf(\textcolor{stringliteral}{"{}Test passed.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00105}00105     }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00106}00106     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00109}\mbox{\hyperlink{main__tester_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00109}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main__tester_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00110}00110 \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00111}00111     \textcolor{keywordtype}{int} n\_exp = 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00112}00112     \textcolor{keywordtype}{double} x1\_exp = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00113}00113     \textcolor{keywordtype}{double} x2\_exp = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00114}00114     \textcolor{keywordtype}{int} n\_tests = 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00115}00115     \textcolor{keywordtype}{int} count\_passed = 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00117}00117     \textcolor{keyword}{struct }\mbox{\hyperlink{structequation}{equation}} test\_eq = \{\};}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00119}00119     scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&n\_tests);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00121}00121     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= n\_tests; i++)}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00122}00122     \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00123}00123         printf(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)nTest \%d\(\backslash\)n"{}}, i);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00124}00124         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}{test\_input\_coef}}(\&test\_eq, \&n\_exp, \&x1\_exp, \&x2\_exp))}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00125}00125         \{}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00126}00126             \mbox{\hyperlink{solver_8h_a1f2a47f0d310b98b02ea684569b4a407}{solve\_equation}}(\&test\_eq);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00127}00127             count\_passed += \mbox{\hyperlink{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}{test\_output}}(\&test\_eq, n\_exp, x1\_exp, x2\_exp);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00128}00128         \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00130}00130         n\_exp = 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00131}00131         x1\_exp = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00132}00132         x2\_exp = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00133}00133         test\_eq.\mbox{\hyperlink{structequation_ae397839d56895b778fb22d00a7e4e29b}{x1}} = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00134}00134         test\_eq.\mbox{\hyperlink{structequation_a1b4eea1690c4d46b6b5f2b7adb2d07e1}{x2}} = NAN;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00135}00135         test\_eq.\mbox{\hyperlink{structequation_ab8cd616bee37bcc86a0dbb1759985759}{number}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00136}00136     \}}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00138}00138     printf(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n++++++++++++++++++++\(\backslash\)nPASSED \%d/\%d TESTS\(\backslash\)n++++++++++++++++++++\(\backslash\)n"{}}, count\_passed, n\_tests);}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00140}00140     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main__tester_8cpp_source_l00141}00141 \}}
+
+\end{DoxyCode}

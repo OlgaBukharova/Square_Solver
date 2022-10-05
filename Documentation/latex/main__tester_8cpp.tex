@@ -1,0 +1,140 @@
+\hypertarget{main__tester_8cpp}{}\doxysection{test/main\+\_\+tester.cpp File Reference}
+\label{main__tester_8cpp}\index{test/main\_tester.cpp@{test/main\_tester.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/solver.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}{print\+\_\+error}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex, int n\+\_\+exp, double x1\+\_\+exp, double x2\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Printing error message. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}{equal\+\_\+solutions}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex, double x1\+\_\+exp, double x2\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Checking if recieved informarion is equal to expected information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}{test\+\_\+input\+\_\+coef}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex, int $\ast$n\+\_\+exp, double $\ast$x1\+\_\+exp, double $\ast$x2\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Scanning test information\+: coefficients and expected number of solutions and solutions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}{test\+\_\+output}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex, int n\+\_\+exp, double x1\+\_\+exp, double x2\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Outputing results of tests. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__tester_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}\label{main__tester_8cpp_a6918add75758dbd552ab492598f97c04}} 
+\index{main\_tester.cpp@{main\_tester.cpp}!equal\_solutions@{equal\_solutions}}
+\index{equal\_solutions@{equal\_solutions}!main\_tester.cpp@{main\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{equal\_solutions()}{equal\_solutions()}}
+{\footnotesize\ttfamily bool equal\+\_\+solutions (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex,  }\item[{double}]{x1\+\_\+exp,  }\item[{double}]{x2\+\_\+exp }\end{DoxyParamCaption})}
+
+
+
+Checking if recieved informarion is equal to expected information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficients, number of solutions and solutions \\
+\hline
+{\em x1\+\_\+exp} & Floating piont number \\
+\hline
+{\em x2\+\_\+exp} & Floating piont number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal 
+
+false if not equal 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main__tester_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{main__tester_8cpp_source}{main\+\_\+tester.\+cpp}}.
+
+\mbox{\Hypertarget{main__tester_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main__tester_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main\_tester.cpp@{main\_tester.cpp}!main@{main}}
+\index{main@{main}!main\_tester.cpp@{main\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main__tester_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{main__tester_8cpp_source}{main\+\_\+tester.\+cpp}}.
+
+\mbox{\Hypertarget{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}\label{main__tester_8cpp_a0437b177c7a42df49a07e1b5128d240b}} 
+\index{main\_tester.cpp@{main\_tester.cpp}!print\_error@{print\_error}}
+\index{print\_error@{print\_error}!main\_tester.cpp@{main\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_error()}{print\_error()}}
+{\footnotesize\ttfamily void print\+\_\+error (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex,  }\item[{int}]{n\+\_\+exp,  }\item[{double}]{x1\+\_\+exp,  }\item[{double}]{x2\+\_\+exp }\end{DoxyParamCaption})}
+
+
+
+Printing error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficients, number of solutions and solutions \\
+\hline
+{\em n\+\_\+exp} & Integer number \\
+\hline
+{\em x1\+\_\+exp} & Floating piont number \\
+\hline
+{\em x2\+\_\+exp} & Floating piont number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main__tester_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{main__tester_8cpp_source}{main\+\_\+tester.\+cpp}}.
+
+\mbox{\Hypertarget{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}\label{main__tester_8cpp_aec1496cd9662a6452fa1992809993f8b}} 
+\index{main\_tester.cpp@{main\_tester.cpp}!test\_input\_coef@{test\_input\_coef}}
+\index{test\_input\_coef@{test\_input\_coef}!main\_tester.cpp@{main\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_input\_coef()}{test\_input\_coef()}}
+{\footnotesize\ttfamily int test\+\_\+input\+\_\+coef (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex,  }\item[{int $\ast$}]{n\+\_\+exp,  }\item[{double $\ast$}]{x1\+\_\+exp,  }\item[{double $\ast$}]{x2\+\_\+exp }\end{DoxyParamCaption})}
+
+
+
+Scanning test information\+: coefficients and expected number of solutions and solutions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficients, number of solutions and solutions \\
+\hline
+{\em n\+\_\+exp} & Integer number \\
+\hline
+{\em x1\+\_\+exp} & Floating piont number \\
+\hline
+{\em x2\+\_\+exp} & Floating piont number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 if test is incorrect, 0 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main__tester_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{main__tester_8cpp_source}{main\+\_\+tester.\+cpp}}.
+
+\mbox{\Hypertarget{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}\label{main__tester_8cpp_a691f72797400dc539b9e57e7aabe996c}} 
+\index{main\_tester.cpp@{main\_tester.cpp}!test\_output@{test\_output}}
+\index{test\_output@{test\_output}!main\_tester.cpp@{main\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_output()}{test\_output()}}
+{\footnotesize\ttfamily int test\+\_\+output (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex,  }\item[{int}]{n\+\_\+exp,  }\item[{double}]{x1\+\_\+exp,  }\item[{double}]{x2\+\_\+exp }\end{DoxyParamCaption})}
+
+
+
+Outputing results of tests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & Structure of coefficients, number of solutions and solutions \\
+\hline
+{\em n\+\_\+exp} & Integer number \\
+\hline
+{\em x1\+\_\+exp} & Floating point number \\
+\hline
+{\em x2\+\_\+exp} & Floating point nimber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 if test is passed, 0 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main__tester_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{main__tester_8cpp_source}{main\+\_\+tester.\+cpp}}.
+

@@ -1,59 +1,40 @@
-\hypertarget{_square___solver_8cpp}{}\doxysection{source/\+Square\+\_\+\+Solver.cpp File Reference}
-\label{_square___solver_8cpp}\index{source/Square\_Solver.cpp@{source/Square\_Solver.cpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\hypertarget{solver_8h}{}\doxysection{headers/solver.h File Reference}
+\label{solver_8h}\index{headers/solver.h@{headers/solver.h}}
 {\ttfamily \#include $<$math.\+h$>$}\newline
-{\ttfamily \#include $<$assert.\+h$>$}\newline
-{\ttfamily \#include $<$ctype.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}../headers/solver.\+h\char`\"{}}\newline
-\doxysubsection*{Macros}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}{EPS}}~1e-\/10
+struct \mbox{\hyperlink{structequation}{equation}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\+\_\+zero}} (double a)
+bool \mbox{\hyperlink{solver_8h_ac11b13568d1fc1edd90bf73db8aca501}{is\+\_\+zero}} (double a)
 \begin{DoxyCompactList}\small\item\em Comparation of floating point numbers to 0. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}{if\+\_\+minus\+\_\+o}} (double a)
+double \mbox{\hyperlink{solver_8h_a63c132cfeca1b70937249d98ce453789}{if\+\_\+minus\+\_\+o}} (double a)
 \begin{DoxyCompactList}\small\item\em Change of -\/0 to 0. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}{solve\+\_\+zero\+\_\+deg}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
-\item 
-bool \mbox{\hyperlink{_square___solver_8cpp_a8fd312984962992d16840d50fd38304d}{is\+\_\+equal}} (double a, double b)
+bool \mbox{\hyperlink{solver_8h_abc43bb2de25cd4015f21976e438b168e}{is\+\_\+equal}} (double a, double b) void \mbox{\hyperlink{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}{solve\+\_\+zero\+\_\+deg}}(struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Comparation of two floating point numbers. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}{solve\+\_\+linear}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+void \mbox{\hyperlink{solver_8h_a3244def89ae1b192c072c2c190913c29}{solve\+\_\+linear}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Solvation of linear equations (coefficient at x$^\wedge$2 is 0, coefficient at x is not 0) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}{solve\+\_\+quadratic}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+void \mbox{\hyperlink{solver_8h_a333e542c4ca501262240c15b9b2a8025}{solve\+\_\+quadratic}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Solvation of quadratic equation (coefficient at x$^\wedge$2 is not 0) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}{clean\+\_\+buffer}} ()
+void \mbox{\hyperlink{solver_8h_abc0b1ba1f366b4271d084e2a9ece74f3}{clean\+\_\+buffer}} ()
 \begin{DoxyCompactList}\small\item\em Cleaning buffer stdin. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}{check\+\_\+buffer}} ()
+int \mbox{\hyperlink{solver_8h_a53c23047136a268468a417304b268ef1}{check\+\_\+buffer}} ()
 \begin{DoxyCompactList}\small\item\em Checking if the buffer stdin is clean. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}{input\+\_\+coef}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+void \mbox{\hyperlink{solver_8h_ae9589529ae262d60b8ed442694cd9f91}{input\+\_\+coef}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Scaning user coefficients. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}{solve\+\_\+equation}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+void \mbox{\hyperlink{solver_8h_a1f2a47f0d310b98b02ea684569b4a407}{solve\+\_\+equation}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Solvation of any equation. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}{output\+\_\+solution}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
+void \mbox{\hyperlink{solver_8h_aba6d49304f3123d6f2f53e9833c4c781}{output\+\_\+solution}} (struct \mbox{\hyperlink{structequation}{equation}} $\ast$ex)
 \begin{DoxyCompactList}\small\item\em Printing solutions depending on the number of colutions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}\label{_square___solver_8cpp_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!EPS@{EPS}}
-\index{EPS@{EPS}!Square\_Solver.cpp@{Square\_Solver.cpp}}
-\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
-{\footnotesize\ttfamily \#define EPS~1e-\/10}
-
-
-
-Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
-
-
-
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}\label{_square___solver_8cpp_a53c23047136a268468a417304b268ef1}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!check\_buffer@{check\_buffer}}
-\index{check\_buffer@{check\_buffer}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_a53c23047136a268468a417304b268ef1}\label{solver_8h_a53c23047136a268468a417304b268ef1}} 
+\index{solver.h@{solver.h}!check\_buffer@{check\_buffer}}
+\index{check\_buffer@{check\_buffer}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{check\_buffer()}{check\_buffer()}}
 {\footnotesize\ttfamily int check\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
@@ -68,9 +49,9 @@ int 0 if clean, 1 otherwise
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}\label{_square___solver_8cpp_abc0b1ba1f366b4271d084e2a9ece74f3}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!clean\_buffer@{clean\_buffer}}
-\index{clean\_buffer@{clean\_buffer}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_abc0b1ba1f366b4271d084e2a9ece74f3}\label{solver_8h_abc0b1ba1f366b4271d084e2a9ece74f3}} 
+\index{solver.h@{solver.h}!clean\_buffer@{clean\_buffer}}
+\index{clean\_buffer@{clean\_buffer}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{clean\_buffer()}{clean\_buffer()}}
 {\footnotesize\ttfamily void clean\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
@@ -82,9 +63,9 @@ Cleaning buffer stdin.
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}\label{_square___solver_8cpp_a63c132cfeca1b70937249d98ce453789}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!if\_minus\_o@{if\_minus\_o}}
-\index{if\_minus\_o@{if\_minus\_o}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_a63c132cfeca1b70937249d98ce453789}\label{solver_8h_a63c132cfeca1b70937249d98ce453789}} 
+\index{solver.h@{solver.h}!if\_minus\_o@{if\_minus\_o}}
+\index{if\_minus\_o@{if\_minus\_o}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{if\_minus\_o()}{if\_minus\_o()}}
 {\footnotesize\ttfamily double if\+\_\+minus\+\_\+o (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
 
@@ -104,9 +85,9 @@ double 0 if a is -\/0, a if not -\/0
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}\label{_square___solver_8cpp_ae9589529ae262d60b8ed442694cd9f91}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!input\_coef@{input\_coef}}
-\index{input\_coef@{input\_coef}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_ae9589529ae262d60b8ed442694cd9f91}\label{solver_8h_ae9589529ae262d60b8ed442694cd9f91}} 
+\index{solver.h@{solver.h}!input\_coef@{input\_coef}}
+\index{input\_coef@{input\_coef}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{input\_coef()}{input\_coef()}}
 {\footnotesize\ttfamily void input\+\_\+coef (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
 
@@ -123,9 +104,9 @@ Scaning user coefficients.
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_a8fd312984962992d16840d50fd38304d}\label{_square___solver_8cpp_a8fd312984962992d16840d50fd38304d}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!is\_equal@{is\_equal}}
-\index{is\_equal@{is\_equal}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_abc43bb2de25cd4015f21976e438b168e}\label{solver_8h_abc43bb2de25cd4015f21976e438b168e}} 
+\index{solver.h@{solver.h}!is\_equal@{is\_equal}}
+\index{is\_equal@{is\_equal}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{is\_equal()}{is\_equal()}}
 {\footnotesize\ttfamily bool is\+\_\+equal (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
 
@@ -156,9 +137,9 @@ Solvation of zero degree equations (coefficients at x$^\wedge$2 and x are 0)
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}\label{_square___solver_8cpp_ac11b13568d1fc1edd90bf73db8aca501}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!is\_zero@{is\_zero}}
-\index{is\_zero@{is\_zero}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_ac11b13568d1fc1edd90bf73db8aca501}\label{solver_8h_ac11b13568d1fc1edd90bf73db8aca501}} 
+\index{solver.h@{solver.h}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
 {\footnotesize\ttfamily bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
 
@@ -180,9 +161,9 @@ false if a is not 0
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}\label{_square___solver_8cpp_aba6d49304f3123d6f2f53e9833c4c781}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!output\_solution@{output\_solution}}
-\index{output\_solution@{output\_solution}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_aba6d49304f3123d6f2f53e9833c4c781}\label{solver_8h_aba6d49304f3123d6f2f53e9833c4c781}} 
+\index{solver.h@{solver.h}!output\_solution@{output\_solution}}
+\index{output\_solution@{output\_solution}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{output\_solution()}{output\_solution()}}
 {\footnotesize\ttfamily void output\+\_\+solution (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
 
@@ -199,9 +180,9 @@ Printing solutions depending on the number of colutions.
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}\label{_square___solver_8cpp_a1f2a47f0d310b98b02ea684569b4a407}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_equation@{solve\_equation}}
-\index{solve\_equation@{solve\_equation}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_a1f2a47f0d310b98b02ea684569b4a407}\label{solver_8h_a1f2a47f0d310b98b02ea684569b4a407}} 
+\index{solver.h@{solver.h}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
 {\footnotesize\ttfamily void solve\+\_\+equation (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
 
@@ -218,9 +199,9 @@ Solvation of any equation.
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}\label{_square___solver_8cpp_a3244def89ae1b192c072c2c190913c29}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_linear@{solve\_linear}}
-\index{solve\_linear@{solve\_linear}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_a3244def89ae1b192c072c2c190913c29}\label{solver_8h_a3244def89ae1b192c072c2c190913c29}} 
+\index{solver.h@{solver.h}!solve\_linear@{solve\_linear}}
+\index{solve\_linear@{solve\_linear}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{solve\_linear()}{solve\_linear()}}
 {\footnotesize\ttfamily void solve\+\_\+linear (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
 
@@ -237,9 +218,9 @@ Solvation of linear equations (coefficient at x$^\wedge$2 is 0, coefficient at x
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
-\mbox{\Hypertarget{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}\label{_square___solver_8cpp_a333e542c4ca501262240c15b9b2a8025}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_quadratic@{solve\_quadratic}}
-\index{solve\_quadratic@{solve\_quadratic}!Square\_Solver.cpp@{Square\_Solver.cpp}}
+\mbox{\Hypertarget{solver_8h_a333e542c4ca501262240c15b9b2a8025}\label{solver_8h_a333e542c4ca501262240c15b9b2a8025}} 
+\index{solver.h@{solver.h}!solve\_quadratic@{solve\_quadratic}}
+\index{solve\_quadratic@{solve\_quadratic}!solver.h@{solver.h}}
 \doxysubsubsection{\texorpdfstring{solve\_quadratic()}{solve\_quadratic()}}
 {\footnotesize\ttfamily void solve\+\_\+quadratic (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
 
@@ -255,14 +236,4 @@ Solvation of quadratic equation (coefficient at x$^\wedge$2 is not 0)
 
 
 Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
-
-\mbox{\Hypertarget{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}\label{_square___solver_8cpp_ab8b3a94efb6c4e92938cac4af3fe7deb}} 
-\index{Square\_Solver.cpp@{Square\_Solver.cpp}!solve\_zero\_deg@{solve\_zero\_deg}}
-\index{solve\_zero\_deg@{solve\_zero\_deg}!Square\_Solver.cpp@{Square\_Solver.cpp}}
-\doxysubsubsection{\texorpdfstring{solve\_zero\_deg()}{solve\_zero\_deg()}}
-{\footnotesize\ttfamily void solve\+\_\+zero\+\_\+deg (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structequation}{equation}} $\ast$}]{ex }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{_square___solver_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_square___solver_8cpp_source}{Square\+\_\+\+Solver.\+cpp}}.
 
