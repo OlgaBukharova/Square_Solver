@@ -41,21 +41,21 @@ bool is_equal(double a, double b)
 /**
  * @brief Solvation of zero degree equations (coefficients at x^2 and x are 0)
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void solve_zero_deg(struct equation *ex);
 
 /**
  * @brief Solvation of linear equations (coefficient at x^2 is 0, coefficient at x is not 0)
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void solve_linear(struct equation *ex);
 
 /**
  * @brief Solvation of quadratic equation (coefficient at x^2 is not 0)
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void solve_quadratic(struct equation *ex);
 
@@ -75,20 +75,20 @@ int check_buffer();
 /**
  * @brief Scaning user coefficients 
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void input_coef(struct equation * ex);
 
 /**
  * @brief Solvation of any equation
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void solve_equation(struct equation *ex);
 
 /**
  * @brief Printing solutions depending on the number of colutions 
  * 
- * @param ex Structure of coefficient, number of solutions and solutions
+ * @param ex Structure of coefficients, number of solutions and solutions
  */
 void output_solution(struct equation *ex);
