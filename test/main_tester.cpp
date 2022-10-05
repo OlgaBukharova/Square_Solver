@@ -2,14 +2,14 @@
 #include "../headers/solver.h"
 #include <assert.h>
 
-bool is_equal(double a, double b)
-{
-    assert(isfinite(a));
-    assert(isfinite(b));
-
-    return is_zero(a - b) ;
-}
-
+/**
+ * @brief Printing error message
+ * 
+ * @param ex Structure of coefficients, number of solutions and solutions
+ * @param n_exp Integer number
+ * @param x1_exp Floating piont number
+ * @param x2_exp Floating piont number
+ */
 void print_error(struct equation * ex, int n_exp, double x1_exp, double x2_exp)
 {
     printf("_________________\n");
@@ -19,6 +19,15 @@ void print_error(struct equation * ex, int n_exp, double x1_exp, double x2_exp)
     printf("_________________\n\n");
 }
 
+/**
+ * @brief Checking if recieved informarion is equal to expected information
+ * 
+ * @param ex Structure of coefficients, number of solutions and solutions
+ * @param x1_exp Floating piont number
+ * @param x2_exp Floating piont number
+ * @return true if equal
+ * @return false if not equal
+ */
 bool equal_solutions(struct equation * ex, double x1_exp, double x2_exp)
 {
     if (ex->number == 2)
@@ -30,6 +39,15 @@ bool equal_solutions(struct equation * ex, double x1_exp, double x2_exp)
     
 }
 
+/**
+ * @brief Scanning test information: coefficients and expected number of solutions and solutions
+ * 
+ * @param ex Structure of coefficients, number of solutions and solutions
+ * @param n_exp Integer number
+ * @param x1_exp Floating piont number
+ * @param x2_exp Floating piont number
+ * @return int 1 if test is incorrect, 0 otherwise
+ */
 int test_input_coef(struct equation* ex, int* n_exp, double* x1_exp, double* x2_exp)
 {
     assert(ex);
@@ -59,6 +77,15 @@ int test_input_coef(struct equation* ex, int* n_exp, double* x1_exp, double* x2_
    return 0;
 }
 
+/**
+ * @brief Outputing results of tests
+ * 
+ * @param ex Structure of coefficients, number of solutions and solutions
+ * @param n_exp Integer number
+ * @param x1_exp Floating point number
+ * @param x2_exp Floating point nimber
+ * @return int 1 if test is passed, 0 otherwise
+ */
 int test_output(struct equation * ex, int n_exp, double x1_exp, double x2_exp)
 {
     assert(ex);
