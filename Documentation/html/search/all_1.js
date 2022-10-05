@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['b',['../structequation.html#ade0c0fb19865318fcc60941aedbaed9a',1,'equation']]]
+  ['eps_0',['EPS',['../_square___solver_8cpp.html#a6ebf6899d6c1c8b7b9d09be872c05aae',1,'Square_Solver.cpp']]]
 ];

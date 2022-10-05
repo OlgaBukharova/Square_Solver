@@ -3,25 +3,10 @@
 #include <assert.h>
 #include <ctype.h>
 
-#define EPS 0.000000001
+#include "../headers/solver.h"
 
-struct equation
-{
-    double a = NAN;
-    double b = NAN;
-    double c = NAN;
-    int number = -1;
-    double x1 = NAN;
-    double x2 = NAN;
-};
+#define EPS 1e-10 
 
-/**
- * @brief Comparation of floating point numbers to 0
- * 
- * @param a Floating point number
- * @return true if a is 0
- * @return false if a is not 0
- */
 bool is_zero(double a)
 {
     assert(isfinite(a));
@@ -29,12 +14,6 @@ bool is_zero(double a)
     return fabs(a) < EPS;
 }
 
-/**
- * @brief Change of -0 to 0
- * 
- * @param a Floating point number
- * @return double 0 if a is -0, a if not -0
- */
 double if_minus_o(double a)  
 {
     assert(isfinite(a));
@@ -45,11 +24,6 @@ double if_minus_o(double a)
         return a;
 }
 
-/**
- * @brief Solvation of zero degree equations (coefficients at x^2 and x are 0)
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void solve_zero_deg(struct equation *ex)
 {
     assert(ex);
@@ -61,11 +35,6 @@ void solve_zero_deg(struct equation *ex)
     } 
 }
 
-/**
- * @brief Solvation of linear equations (coefficient at x^2 is 0, coefficient at x is not 0)
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void solve_linear(struct equation *ex)
 {
     assert(ex);
@@ -76,11 +45,6 @@ void solve_linear(struct equation *ex)
     ex->x1 = if_minus_o(-(ex->c) / (ex->b));
 }
 
-/**
- * @brief Solvation of quadratic equation (coefficient at x^2 is not 0)
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void solve_quadratic(struct equation *ex)
 {
     assert(ex);
@@ -110,14 +74,12 @@ void solve_quadratic(struct equation *ex)
 
             ex->x1 = (-(ex->b) - sqrt_discr) / (2 * (ex->a));
             ex->x2 = (-(ex->b) + sqrt_discr) / (2 * (ex->a));
+
+
         }
     }
 }
 
-/**
- * @brief Cleaning buffer stdin
- * 
- */
 void clean_buffer()
 {
     char c = 0;
@@ -125,11 +87,6 @@ void clean_buffer()
     while (((c = getchar()) != EOF) && (c != '\n'));
 }
 
-/**
- * @brief Checking if the buffer stdin is clean
- * 
- * @return int 0 if clean, 1 otherwise
- */
 int check_buffer()
 {
     char c = 0;
@@ -141,11 +98,6 @@ int check_buffer()
     return 0; //correct
 }
 
-/**
- * @brief Scaning user coefficients 
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void input_coef(struct equation * ex)
 {
     assert(ex);
@@ -155,8 +107,6 @@ void input_coef(struct equation * ex)
     while (s != 3)
     {
         s = scanf("%lf%lf%lf", &(ex->a), &(ex->b), &(ex->c));
-
-        char c = 0;
 
         if ((s != 3) || (check_buffer()))
         {
@@ -170,11 +120,6 @@ void input_coef(struct equation * ex)
    
 }
 
-/**
- * @brief Solvation of any equation
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void solve_equation(struct equation *ex)
 {
     assert(ex);
@@ -199,11 +144,6 @@ void solve_equation(struct equation *ex)
     }
 }
 
-/**
- * @brief Printing solutions depending on the number of colutions 
- * 
- * @param ex Structure of coefficient, number of solutions and solutions
- */
 void output_solution(struct equation *ex)
 {
     assert(ex);
@@ -221,19 +161,6 @@ void output_solution(struct equation *ex)
             break;
        
         default:
-            printf("All numbers\n"); 
+            printf("All numbers\n");  
     }
-}
-
-int main()
-{
-    struct equation user_eq = {};
-
-    input_coef(&user_eq);
-
-    solve_equation(&user_eq);
-
-    output_solution(&user_eq);
-
-    return 0;
 }
