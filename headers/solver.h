@@ -36,7 +36,7 @@ double if_minus_o(double a);
  * @return true if equal
  * @return false if not equal
  */
-bool is_equal(double a, double b)
+bool is_equal(double a, double b);
 
 /**
  * @brief Solvation of zero degree equations (coefficients at x^2 and x are 0)
